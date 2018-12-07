@@ -1,13 +1,13 @@
 {
     "name": "kouosl/portal-login",
-    "description": "Sample module for KOUOSL PORTAL",
+    "description": "Login module for KOUOSL PORTAL",
     "type": "yii2-extension",
     "keywords": ["yii2", "yii 2", "login", "module", "modules"],
     "license": "BSD-3-Clause",
     "authors": [
         {
-            "name": "Ekrem HATİPOĞLU",
-            "email": "ekrem.hatipoglu@outlook.com"
+            "name": "Ramazan Nejdet SARIKAYA",
+            "email": "necsrky@gmail.com"
         }
     ],
     "autoload": {
