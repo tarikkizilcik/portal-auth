@@ -14,13 +14,12 @@ use yii\web\HttpException;
  */
 class Module extends \kouosl\base\Module
 {
-    public $controllerNamespace = '';
+   // public $controllerNamespace = '';
 
     public function init()
     {
         parent::init();
-
-        // custom initialization code goes here
+		$this->registerTranslations();
     }
     public function behaviors()
     {
@@ -58,7 +57,7 @@ class Module extends \kouosl\base\Module
 
     public function registerTranslations()
     {
-        Yii::$app->i18n->translations['site/*'] = [
+        Yii::$app->i18n->translations['login/*'] = [
             'class' => 'yii\i18n\PhpMessageSource',
             'sourceLanguage' => 'en-US',
             'basePath' => '@kouosl/login/messages',
@@ -70,6 +69,14 @@ class Module extends \kouosl\base\Module
 
     public static function t($category, $message, $params = [], $language = null)
     {
+		Yii::$app->i18n->translations['login/*'] = [
+            'class' => 'yii\i18n\PhpMessageSource',
+            'sourceLanguage' => 'en-US',
+            'basePath' => '@kouosl/login/messages',
+            'fileMap' => [
+                'login/login' => 'login.php',
+            ],
+        ];
         return Yii::t('login/'. $category, $message, $params, $language);
     }
 
