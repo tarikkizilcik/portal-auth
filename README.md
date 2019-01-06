@@ -137,4 +137,8 @@ komutunu kullanarak gördüğümüz,
 bilgisi bize diğer metodları listelemektedir. Burada index default olarak kullanıcı sayısı, user metodu yeni bir kulanıcı eklemeyi,batch metodu kullanıcı grubu eklemeyi, delete le kullanıcı silmeyi ve update ile de id si verilen kullanıcıyı güncellemeyi yapabilmekteyiz.
 ## APİ
 
+Rest API olarak bildiğimiz api görevini üstlenen controllerımız modül klasörü içerisinde bulunan controllers/api içerisinde yer alan "UsersControllers.php" dosyasıdır. Herhangi bir projemizde backend olarak görev almasını istediğimiz bu web service ile çeşitli isteklerle birlikte hedeflediğimiz database verilerine ulaşabilmekteyiz. Başlıca Get,Post,Put ve Delete http request metodlarından oluşan api yapıları bu modülde de bu şekilde kullanılmaktadır. Get metoduyla parametresiz atılan istekte tüm kullanıcıları bir json datası olarak döndüren api işlevi, kullanıcı id si verilerek gönderilen bir delete requesti ile de silme işlemini gerçekleştirir. Bilgisayarınıza indireceğiniz Postman uygulamasıyla bu yapının nasıl işlediğini görebilirsiniz.
+
+![api](https://user-images.githubusercontent.com/41762847/50740721-bc9b3180-1203-11e9-9fa7-2690e5a8f121.png)
+
 
