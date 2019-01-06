@@ -68,6 +68,11 @@ Bu login modülünde kullanılan giriş yöntemlerinin aktif hale gelebilmesi i�
 
 ![client](https://user-images.githubusercontent.com/41762847/50738045-c9f2f480-11e0-11e9-990b-18f74e34732f.png)
 
+Modülün çalışmak için ihityaç duyduğu iki database tablosu bulunmaktadır. Bunlardan 1. olan user tablosu sistem girişinin de kullandığı bir tablo olduğundandolayı hazır halde phpMyAdmin de bulunmaktadır. Yapmamız gereken 2. tabloyu da modülü kullanmaya başlamadan önce oluşturmaktır. bunun için modül dizini altında migrations klasörü içinde bulunan "m181226_222711_auth.php" adlı migration dosyasını portal ana dizininde yer alan migrations klasörüne taşımak ve portal dizini altında çalışan konsol ekranında,
+```
+ php yii migrate
+```
+komutunu çalıştırmaktır. Gelen soruya evet denilerek ilgili tablonun database tarafında oluşması sağlanır.
 ### Modül kullanımı 
 ```
 http://portal.kouosl/login/auth
