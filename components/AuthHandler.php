@@ -25,38 +25,60 @@ class AuthHandler
     public function handle()
     {
         $attributes = $this->client->getUserAttributes();
-        echo '<pre>'; var_dump($attributes);exit;
         $email = ArrayHelper::getValue($attributes, 'email');
         $id = ArrayHelper::getValue($attributes, 'id');
-        $nickname = ArrayHelper::getValue($attributes, 'login');
+        $username = ArrayHelper::getValue($attributes, 'name');
 
         /* @var Auth $auth */
         $auth = Auth::find()->where([
             'source' => $this->client->getId(),
             'source_id' => $id,
         ])->one();
-
+		
+		if(empty($email)){
+			Yii::$app->getSession()->setFlash('error', 
+                                Yii::t('app', 'Unable to log in user. No email address provided')
+                            );
+			return false;
+		}
         if (Yii::$app->user->isGuest) {
             if ($auth) { // login
                 /* @var User $user */
                 $user = $auth->user;
-                $this->updateUserInfo($user);
-                Yii::$app->user->login($user, Yii::$app->params['user.rememberMeDuration']);
+               if($this->updateUserInfo($user)){
+				Yii::$app->user->login($user, Yii::$app->params['user.rememberMeDuration']);
+			   }else{
+				   Yii::$app->getSession()->setFlash('error', 
+                                Yii::t('app', 'Unable to log in user')
+                            );
+			    }
+                
             } else { // signup
-                if ($email !== null && User::find()->where(['email' => $email])->exists()) {
-                    Yii::$app->getSession()->setFlash('error', [
-                        Yii::t('app', "User with the same email as in {client} account already exists but isn't linked to it. Login using email first to link it.", ['client' => $this->client->getTitle()]),
-                    ]);
+			$existingUser = User::findOne(['email' => $email]);
+                if ($existingUser) {
+                    $auth = new Auth([
+						'user_id'=>$existingUser->id,
+						'source' =>$this->client->getId(),
+						'source_id' => (string) $id,
+					]);             
+					if($this->updateUserInfo($existingUser) && $auth->save()){
+						Yii::$app->user->login($existingUser, Yii::$app->params['user.rememberMeDuration']);
+					}else{
+						Yii::$app->getSession()->setFlash('error', 
+                            Yii::t('app', 'Unable to save user: {errors}', [
+                                'client' => $this->client->getTitle(),
+                                'errors' => json_encode($user->getErrors()),
+                            ])
+                        );
+					}
                 } else {
-                    $password = Yii::$app->security->generateRandomString(6);
+                    $password = Yii::$app->security->generateRandomString(12);
                     $user = new User([
-                        'username' => $nickname,
-                        'github' => $nickname,
+                        'username' => $username,
                         'email' => $email,
+						'status' => User::STATUS_ACTIVE,
                         'password' => $password,
                     ]);
-                    $user->generateAuthKey();
-                    $user->generatePasswordResetToken();
 
                     $transaction = User::getDb()->beginTransaction();
 
@@ -70,20 +92,22 @@ class AuthHandler
                             $transaction->commit();
                             Yii::$app->user->login($user, Yii::$app->params['user.rememberMeDuration']);
                         } else {
-                            Yii::$app->getSession()->setFlash('error', [
+							$transaction->rollBack();
+                            Yii::$app->getSession()->setFlash('error', 
                                 Yii::t('app', 'Unable to save {client} account: {errors}', [
                                     'client' => $this->client->getTitle(),
                                     'errors' => json_encode($auth->getErrors()),
-                                ]),
-                            ]);
+                                ])
+                            );
                         }
                     } else {
-                        Yii::$app->getSession()->setFlash('error', [
+						$transaction->rollBack();
+                        Yii::$app->getSession()->setFlash('error', 
                             Yii::t('app', 'Unable to save user: {errors}', [
                                 'client' => $this->client->getTitle(),
                                 'errors' => json_encode($user->getErrors()),
-                            ]),
-                        ]);
+                            ])
+                        );
                     }
                 }
             }
@@ -126,11 +150,12 @@ class AuthHandler
      */
     private function updateUserInfo(User $user)
     {
-        $attributes = $this->client->getUserAttributes();
-        $github = ArrayHelper::getValue($attributes, 'login');
-        if ($user->github === null && $github) {
-            $user->github = $github;
-            $user->save();
-        }
+        if($user->status === User::STATUS_INSERTED){
+			$password = Yii::$app->security->generateRandomString(60);
+			$user->status = User::STATUS_ACTIVE;
+			$user->password = $password;
+			return $user->save();
+		}
+		return $user->status !== User::STATUS_BLOCKED;
     }
 }
