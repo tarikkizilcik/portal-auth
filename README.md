@@ -20,7 +20,7 @@ erişilebiliyor olması gerekmektedir.
 Gerekli makina kurumları tamamlandıktan sonra 
 
 ```
-https://github.com/nejdetsarikaya3802/portal.git 
+https://github.com/tarikkizilcik/portal.git 
 ```
 
 adresinde ki portal repositorysi clone ya da download edilerek ilgili portal klasöründeki gerekli değişiklikler update edilmelidir. Verilen adresten temin edilen portal klasörünün içersinde vendor dizini bulunmamaktadır. Kurulumun ileri aşamalarında dizine eklenecek dosyalardan bahsedilecektir.  
@@ -36,11 +36,11 @@ Kullanılmak istenen login modülünü ve ana projeye ait fork edilip değiştir
         ...
 	    {
             "type": "vcs",
-            "url": "https://github.com/nejdetsarikaya3802/portal-login.git"
+            "url": "https://github.com/tarikkizilcik/portal-login.git"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/nejdetsarikaya3802/portal-theme.git"
+            "url": "https://github.com/tarikkizilcik/portal-theme.git"
         },
         ...
  ],
@@ -146,5 +146,3 @@ bilgisi bize diğer metodları listelemektedir. Burada index default olarak kull
 Rest API olarak bildiğimiz api görevini üstlenen controllerımız modül klasörü içerisinde bulunan controllers/api içerisinde yer alan "UsersControllers.php" dosyasıdır. Herhangi bir projemizde backend olarak görev almasını istediğimiz bu web service ile çeşitli isteklerle birlikte hedeflediğimiz database verilerine ulaşabilmekteyiz. Başlıca Get,Post,Put ve Delete http request metodlarından oluşan api yapıları bu modülde de bu şekilde kullanılmaktadır. Get metoduyla parametresiz atılan istekte tüm kullanıcıları bir json datası olarak döndüren api işlevi, kullanıcı id si verilerek gönderilen bir delete requesti ile de silme işlemini gerçekleştirir. Bilgisayarınıza indireceğiniz Postman uygulamasıyla bu yapının nasıl işlediğini görebilirsiniz.
 
 ![api](https://user-images.githubusercontent.com/41762847/50740721-bc9b3180-1203-11e9-9fa7-2690e5a8f121.png)
-
-
