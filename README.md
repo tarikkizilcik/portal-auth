@@ -2,7 +2,7 @@
 
 portal-auth modülü http://portal.kouosl/ sitesinde yer alan modülümüzün giriş kısmını oluşturan kısımdır.
 http://portal.kouosl/admin/login/auth adresi ile erişilen backend kısmında kullanıcılara yetki alıp/verme, görevlendirme vb. gibi yetkilerin tutulduğu kısımdır.
-http://portal.kouosl/admin/login/login ile admin kullanıcısına, kullanıcıları görüntüleme, yenisini ekleme, silme ve düzenleme imkanı sağlar
+http://portal.kouosl/admin/login/login ile admin kullanıcısına, kullanıcıları görüntüleme, yenisini ekleme, silme ve düzenleme imkanı sağlar.
 
 ## Modül Kurulumu
  
@@ -27,7 +27,7 @@ adresinde ki portal repositorysi clone ya da download edilerek ilgili portal kla
 
 ### Modül ekleme ve hazır hale getirme
 
-Kullanılmak istenen login modülünü ve ana projeye ait fork edilip değiştirilmiş theme modülünün kullanılabilir hale getirilmesi için portal ana dizininde bulunan "composer.json" dosyası düzenlenilerek "repositories" dizisi içerisine bu iki modül resimde gösterildiği gibi url adresleriyle beraber eklenmelidir.
+Kullanılmak istenen login modülünü ve ana projeye ait fork edilip değiştirilmiş theme modülünün kullanılabilir hale getirilmesi için portal ana dizininde bulunan "composer.json" dosyası düzenlenilerek "repositories" dizisi içerisine bu iki modül beraber eklenmelidir.
 
 
 ```
@@ -66,7 +66,7 @@ Bu login modülünde kullanılan giriş yöntemlerinin aktif hale gelebilmesi i�
 ## taşınmalıdır.
 
 
-Modülün çalışmak için ihityaç duyduğu iki database tablosu bulunmaktadır. Bunlardan 1. olan user tablosu sistem girişinin de kullandığı bir tablo olduğundandolayı hazır halde phpMyAdmin de bulunmaktadır. Yapmamız gereken 2. tabloyu da modülü kullanmaya başlamadan önce oluşturmaktır. bunun için modül dizini altında migrations klasörü içinde bulunan "m181226_222711_auth.php" adlı migration dosyasını portal ana dizininde yer alan migrations klasörüne taşımak ve portal dizini altında çalışan konsol ekranında,
+Modülün çalışmak için ihtiyaç duyduğu databe tabloları bulunmaktadır. Bunlardan 1. olan user tablosu sistem girişinin de kullandığı bir tablo olduğundandolayı hazır halde phpMyAdmin de bulunmaktadır. Yapmamız gereken 2. tabloyu da modülü kullanmaya başlamadan önce oluşturmaktır. bunun için modül dizini altında migrations klasörü içinde bulunan "m181226_222711_auth.php" adlı migration dosyasını portal ana dizininde yer alan migrations klasörüne taşımak ve portal dizini altında çalışan konsol ekranında,
 ```
  php yii migrate
 ```
