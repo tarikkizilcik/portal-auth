@@ -106,7 +106,8 @@ NavBar::begin([
 ```
 şeklinde head ve top' da değişiklik yapılarak görüntü çeşitlendirilmiş ve makyajlandırılmıştır.
 
-!(https://drive.google.com/file/d/17rx0XV1SIzWFZmqthwbXLoRs3j4t2jyE/view?usp=sharing)
+![auth](https://drive.google.com/file/d/17rx0XV1SIzWFZmqthwbXLoRs3j4t2jyE/view)
+
 
 
 ## Konsol ile kullanım
