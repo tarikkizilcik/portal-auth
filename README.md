@@ -103,9 +103,7 @@ NavBar::begin([
 ```
 şeklinde değişiklik yapılarak görüntü çeşitlendirilmiş ve makyajlandırılmıştır.
 
-https://drive.google.com/file/d/17rx0XV1SIzWFZmqthwbXLoRs3j4t2jyE/view
-
-![Görünüm](file:///C:/Users/vagrant/Desktop/base%20gorunum.png)
+![basegorunum](https://github.com/tarikkizilcik/portal-auth/issues/2#issue-400824585)
 
 
 
