@@ -103,7 +103,7 @@ NavBar::begin([
 ```
 şeklinde değişiklik yapılarak görüntü çeşitlendirilmiş ve makyajlandırılmıştır.
 
-![basegorunum](https://github.com/tarikkizilcik/portal-auth/issues/2#issue-400824585)
+![base gorunum](https://user-images.githubusercontent.com/45855154/51403616-09ff9300-1b62-11e9-8fff-c8eff8d7a23a.png)
 
 
 
