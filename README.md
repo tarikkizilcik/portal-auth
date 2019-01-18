@@ -60,10 +60,7 @@ Halledilen bu adımların ardından, console ekranında portal dizinine ulaştı
  sudo composer self-update
 ```
 ile eklenilen modüllerin portal/vendor/kouosl altına çekilmesi sağlanır.
-Bu login modülünde kullanılan giriş yöntemlerinin aktif hale gelebilmesi için portal-login modülü altında bulunan 
-
-#### "yii2-authclient" klasörü portal/vendor/yiisoft içerisine 
-## taşınmalıdır.
+Bu login modülünde kullanılan giriş yöntemlerinin aktif hale gelebilmesi için portal-login modülü altında bulunan "yii2-authclient" klasörü portal/vendor/yiisoft içerisine taşınmalıdır.
 
 
 Modülün çalışmak için ihtiyaç duyduğu databe tabloları bulunmaktadır. Bunlardan 1. olan user tablosu sistem girişinin de kullandığı bir tablo olduğundandolayı hazır halde phpMyAdmin de bulunmaktadır. Yapmamız gereken 2. tabloyu da modülü kullanmaya başlamadan önce oluşturmaktır. bunun için modül dizini altında migrations klasörü içinde bulunan "m181226_222711_auth.php" adlı migration dosyasını portal ana dizininde yer alan migrations klasörüne taşımak ve portal dizini altında çalışan konsol ekranında,
