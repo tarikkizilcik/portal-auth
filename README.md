@@ -92,6 +92,10 @@ Fork ettiğimiz theme modülünde yaptığımız çeşitli widget değişiklerin
 
 kodunu kullanarak,
 ```
+</head>
+<body style="background-color:#EAFFFA">
+<?php $this->beginBody() ?>
+
 NavBar::begin([
         'brandLabel' => '<b>Employee Authentication Module</b>',
         'brandUrl' => Yii::$app->homeUrl,
@@ -100,7 +104,7 @@ NavBar::begin([
             'style' => 'background-color:#F9DC5C'
         ],
 ```
-şeklinde değişiklik yapılarak görüntü çeşitlendirilmiş ve makyajlandırılmıştır.
+şeklinde head ve top' da değişiklik yapılarak görüntü çeşitlendirilmiş ve makyajlandırılmıştır.
 
 
 ## Konsol ile kullanım
