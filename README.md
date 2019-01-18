@@ -1,7 +1,7 @@
-# portal-login
+# portal-auth
 
-portal-login modülü http://portal.kouosl/ sitesinde yer alan giriş kısmına ek olarak kullanıcıya facebook ve google ile de giriş yapma imkanı veren bir kullanıcı modülüdür.
-http://portal.kouosl/admin/login/auth adresi ile erişilen backend kısmında giriş yöntemlerinin seçilebildiği bu modül aynı zamanda data gridview yapısını kullanarak,
+portal-auth modülü http://portal.kouosl/ sitesinde yer alan modülümüzün giriş kısmını oluşturan kısımdır.
+http://portal.kouosl/admin/login/auth adresi ile erişilen backend kısmında kullanıcılara yetki alıp/verme, görevlendirme vb. gibi yetkilerin tutulduğu kısımdır.
 http://portal.kouosl/admin/login/login ile admin kullanıcısına kullanıcıları görüntüleme,silme ve düzenleme imkanı sunarken,http://portal.kouosl/login/login adresiyle
 de normal kullanıcılara sunulan frontend ile diğer kullanıcıları görüntüleme olanağı vermektedir.
 
