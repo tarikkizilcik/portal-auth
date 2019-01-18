@@ -105,7 +105,7 @@ NavBar::begin([
 ![5555](https://user-images.githubusercontent.com/45855154/51403846-b9d50080-1b62-11e9-9f92-bcc6cbc45e44.png)
 
 
-şeklinde değişiklik yapılarak aşağıda görüldüğü gibi çeşitlendirilmiş ve makyajlandırılmıştır.
+şeklinde gerek yazı tipinde, boyutunda ve renklerinde gerekse arka plan (title/body) da değişiklikler yapılarak aşağıda görüldüğü gibi çeşitlendirilmiş ve makyajlandırılmıştır.
 
 
 ![base gorunum](https://user-images.githubusercontent.com/45855154/51403616-09ff9300-1b62-11e9-8fff-c8eff8d7a23a.png)
