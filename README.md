@@ -101,6 +101,10 @@ NavBar::begin([
             'style' => 'background-color:#F9DC5C'
         ],
 ```
+
+![5555](https://user-images.githubusercontent.com/45855154/51403846-b9d50080-1b62-11e9-9f92-bcc6cbc45e44.png)
+
+
 şeklinde değişiklik yapılarak aşağıda görüldüğü gibi çeşitlendirilmiş ve makyajlandırılmıştır.
 
 
