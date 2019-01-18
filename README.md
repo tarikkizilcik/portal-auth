@@ -98,7 +98,7 @@ kodunu kullanarak,
   border-color: #82b366; !important;
 }
 ```
-şeklinde yaptığımız değişiklik ile yeni görüntümüzü elde ediyoruz.
+şeklinde değişiklik yapılarak görüntü çeşitlendirilmiş ve makyajlandırılmıştır.
 
 
 ## Konsol ile kullanım
