@@ -85,7 +85,7 @@ eğer sisteme yeni bir kullanıcı ile giriş yapılmak isteniyorsa sistemden lo
 
 ![signup](https://user-images.githubusercontent.com/41762847/50738261-f14ac100-11e2-11e9-9c6a-70998cfa639f.png)
 
-Fork ettiğimiz theme modülünde yaptığımız çeşitli widget değişiklerinin yanı sıra gözle görülür değişiklikleri göstermek için kullandığımız custom css dosyamızı içerisinde 
+Fork ettiğimiz theme modülünde yaptığımız çeşitli widget değişikleriyle birlikte yaptığımız diğer değişiklikleri göstermek için kullandığımız custom css dosyamızı içerisinde 
 ```
 !important;
 ```
