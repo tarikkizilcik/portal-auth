@@ -104,7 +104,7 @@ NavBar::begin([
             'style' => 'background-color:#F9DC5C'
         ],
 ```
-şeklinde head ve top' da değişiklik yapılarak görüntü çeşitlendirilmiş ve makyajlandırılmıştır.
+şeklinde değişiklik yapılarak görüntü çeşitlendirilmiş ve makyajlandırılmıştır.
 
 https://drive.google.com/file/d/17rx0XV1SIzWFZmqthwbXLoRs3j4t2jyE/view
 
