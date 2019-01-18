@@ -2,8 +2,7 @@
 
 portal-auth modülü http://portal.kouosl/ sitesinde yer alan modülümüzün giriş kısmını oluşturan kısımdır.
 http://portal.kouosl/admin/login/auth adresi ile erişilen backend kısmında kullanıcılara yetki alıp/verme, görevlendirme vb. gibi yetkilerin tutulduğu kısımdır.
-http://portal.kouosl/admin/login/login ile admin kullanıcısına kullanıcıları görüntüleme,silme ve düzenleme imkanı sunarken,http://portal.kouosl/login/login adresiyle
-de normal kullanıcılara sunulan frontend ile diğer kullanıcıları görüntüleme olanağı vermektedir.
+http://portal.kouosl/admin/login/login ile admin kullanıcısına, kullanıcıları görüntüleme, yenisini ekleme, silme ve düzenleme imkanı sağlar
 
 ## Modül Kurulumu
  
