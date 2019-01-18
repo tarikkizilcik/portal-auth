@@ -92,11 +92,13 @@ Fork ettiğimiz theme modülünde yaptığımız çeşitli widget değişiklerin
 
 kodunu kullanarak,
 ```
-.navbar-inverse.navbar-fixed-top.navbar
-{
-  background-color: #c50804; !important;
-  border-color: #82b366; !important;
-}
+NavBar::begin([
+        'brandLabel' => '<b>Employee Authentication Module</b>',
+        'brandUrl' => Yii::$app->homeUrl,
+        'options' => [
+            'class' => 'navbar navbar-fixed-top',
+            'style' => 'background-color:#F9DC5C'
+        ],
 ```
 şeklinde değişiklik yapılarak görüntü çeşitlendirilmiş ve makyajlandırılmıştır.
 
