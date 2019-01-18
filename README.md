@@ -101,7 +101,7 @@ NavBar::begin([
             'style' => 'background-color:#F9DC5C'
         ],
 ```
-şeklinde değişiklik yapılarak görüntü çeşitlendirilmiş ve makyajlandırılmıştır.
+şeklinde değişiklik yapılarak aşağıda görüldüğü gibi çeşitlendirilmiş ve makyajlandırılmıştır.
 
 ![base gorunum](https://user-images.githubusercontent.com/45855154/51403616-09ff9300-1b62-11e9-8fff-c8eff8d7a23a.png)
 
