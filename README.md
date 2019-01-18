@@ -66,7 +66,6 @@ Bu login modülünde kullanılan giriş yöntemlerinin aktif hale gelebilmesi i�
 #### "yii2-authclient" klasörü portal/vendor/yiisoft içerisine 
 ## taşınmalıdır.
 
-![client](https://user-images.githubusercontent.com/41762847/50738045-c9f2f480-11e0-11e9-990b-18f74e34732f.png)
 
 Modülün çalışmak için ihityaç duyduğu iki database tablosu bulunmaktadır. Bunlardan 1. olan user tablosu sistem girişinin de kullandığı bir tablo olduğundandolayı hazır halde phpMyAdmin de bulunmaktadır. Yapmamız gereken 2. tabloyu da modülü kullanmaya başlamadan önce oluşturmaktır. bunun için modül dizini altında migrations klasörü içinde bulunan "m181226_222711_auth.php" adlı migration dosyasını portal ana dizininde yer alan migrations klasörüne taşımak ve portal dizini altında çalışan konsol ekranında,
 ```
@@ -77,15 +76,9 @@ komutunu çalıştırmaktır. Gelen soruya evet denilerek ilgili tablonun databa
 ```
 http://portal.kouosl/login/auth
 ```
-adresi ile,
+adresi ile anasayfa gözüküyor olması gerekir.
 
-![home](https://user-images.githubusercontent.com/41762847/50738098-6f0dcd00-11e1-11e9-9e72-cb3567bcb94e.png)
-
-login modülünün anasayfasını görüyor olmamız gerekir. Değiştirlen sistem dili ile anasayfamızı ingilizce olarakta görebiliriz.
-
-![home_en](https://user-images.githubusercontent.com/41762847/50738129-ca3fbf80-11e1-11e9-921f-2ad7e4f2c93e.png) 
-
-login butonuyla devam edildiği taktirde karşımıza gelen login ekranında yerel kullanıcı bilgileriyle yahut facebook veya google ile login olunabilmektedir.
+login butonuyla devam edildiği taktirde karşımıza gelen login ekranında kayıtlı olan kullanıcı bilgileriyle giriş sağlanılabilmektedir.
 
 ![login](https://user-images.githubusercontent.com/41762847/50738173-3d493600-11e2-11e9-9f15-e7bc8a074c61.png)
 
@@ -93,7 +86,6 @@ eğer sisteme yeni bir kullanıcı ile giriş yapılmak isteniyorsa sistemden lo
 
 ![signup](https://user-images.githubusercontent.com/41762847/50738261-f14ac100-11e2-11e9-9c6a-70998cfa639f.png)
 
-böylelikle login modülümüz kullanıma hazır hale gelmiş oluyor. 
 Fork ettiğimiz theme modülünde yaptığımız çeşitli widget değişiklerinin yanı sıra gözle görülür değişiklikleri göstermek için kullandığımız custom css dosyamızı içerisinde 
 ```
 !important;
@@ -108,8 +100,6 @@ kodunu kullanarak,
 }
 ```
 şeklinde yaptığımız değişiklik ile yeni görüntümüzü elde ediyoruz.
-
-![home_css](https://user-images.githubusercontent.com/41762847/50738572-8307fd80-11e6-11e9-9899-b966c364dd05.png)
 
 
 ## Konsol ile kullanım
@@ -136,13 +126,3 @@ komutunu kullanarak gördüğümüz,
     user/user-update
 ```
 bilgisi bize diğer metodları listelemektedir. Burada index default olarak kullanıcı sayısı, user metodu id si verilen bir kulanıcı listelemeyi,user-batch metodu kullanıcı grubu eklemeyi,user-create metodu yeni bir kullanıcı eklemeyi, user-delete le kullanıcı silmeyi ve user-update ile de id si verilen kullanıcıyı güncellemeyi yapabilmekteyiz.
-
-Örnek olarak toplam kullanıcı sayısı ve kullanıcı id si ile kullanıcı listelemeyi gösterebiliriz.
-
-![console pic](https://user-images.githubusercontent.com/41762847/50740969-06861680-1208-11e9-802a-0206a5dec260.png)
-
-## APİ
-
-Rest API olarak bildiğimiz api görevini üstlenen controllerımız modül klasörü içerisinde bulunan controllers/api içerisinde yer alan "UsersControllers.php" dosyasıdır. Herhangi bir projemizde backend olarak görev almasını istediğimiz bu web service ile çeşitli isteklerle birlikte hedeflediğimiz database verilerine ulaşabilmekteyiz. Başlıca Get,Post,Put ve Delete http request metodlarından oluşan api yapıları bu modülde de bu şekilde kullanılmaktadır. Get metoduyla parametresiz atılan istekte tüm kullanıcıları bir json datası olarak döndüren api işlevi, kullanıcı id si verilerek gönderilen bir delete requesti ile de silme işlemini gerçekleştirir. Bilgisayarınıza indireceğiniz Postman uygulamasıyla bu yapının nasıl işlediğini görebilirsiniz.
-
-![api](https://user-images.githubusercontent.com/41762847/50740721-bc9b3180-1203-11e9-9fa7-2690e5a8f121.png)
